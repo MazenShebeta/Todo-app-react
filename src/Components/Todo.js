@@ -27,8 +27,7 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
 
 
 
-    return (
-        todos.map((todo, index) => (
+    return todos.map((todo, index) => (
             <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
             key = {index}
             >
@@ -37,19 +36,19 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
                 </div>
 
                 <div className='icons'>
-                    <RiCloseCircleLine
-                    onClick={() => removeTodo(todo.id)}
-                    className='delete-icon'
-                    />
                     <TiEdit
                     onClick={() => setEdit({id: todo.id, value: todo.text})}
                     className='edit-icon'
                     />
+
+                    <RiCloseCircleLine
+                    onClick={() => removeTodo(todo.id)}
+                    className='delete-icon'
+                    />
+                    
                 </div>
             </div>
         ))
-
-    )
     }
 
 export default Todo

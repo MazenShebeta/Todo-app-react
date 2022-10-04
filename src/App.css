@@ -49,6 +49,7 @@ h1 {
   width: 320px;
   background: transparent;
   color: #fff;
+  
 }
 
 .todo-input::placeholder {
@@ -135,6 +136,7 @@ h1 {
   align-items: center;
   font-size: 24px;
   cursor: pointer;
+  gap: 15px;
 }
 
 .delete-icon {
